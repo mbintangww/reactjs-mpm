@@ -1,38 +1,129 @@
+/* Styles for the App container */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Styles for the header */
 .App-header {
-  background-color: #282c34;
+  background-color: #f0f0f0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: rgb(96, 93, 93);
+}
+
+/* Styles for the item input area */
+.item-input {
+  margin-bottom: 20px;
+}
+
+.item-input input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.item-input button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
   color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.item-input button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styles for the item list */
+.item-list {
+  list-style-type: none;
+  color: #333;
+  padding: 0;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
 }
+
+.item-list li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-list li .button-container button:nth-child(1) { /* Target "Remove" button */
+  background-color: #f44336; /* Red background color */
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.item-list li .button-container button:nth-child(2) { /* Target "Complete"/"Undo" button */
+  background-color: #4CAF50; /* Green background color */
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.item-list li .button-container button:hover { /* Hover effect for both buttons */
+  background-color: #ddd; /* Light gray hover color */
+}
+
+.item-list li button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.item-list li button:hover {
+  background-color: #d32f2f;
+}
+
+/* Additional styles for completed items */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.completed button {
+  background-color: #cccccc;
+  margin-left: 10px;
+}
+
+.completed button:hover {
+  background-color: #aaaaaa;
+}
+.item-list li .button-container button {
+  margin-right: 5px; /* Add margin between buttons */
+}
+.App-footer {
+  background-color: #333; /* Change background color for footer */
+  color: white;
+  padding: 10px 0; /* Add padding top and bottom */
+  text-align: center;
+}
+
